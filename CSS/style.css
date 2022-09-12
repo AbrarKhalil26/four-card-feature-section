@@ -1,0 +1,168 @@
+/* ------------------------------------- */
+/*              Root                     */
+/* ------------------------------------- */
+:root{
+    /* ### Primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /* ### Neutral */
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+/* ------------------------------------- */
+/*              Global Style             */
+/* ------------------------------------- */
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 1440px;
+    Font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eee;
+    position: relative;
+}
+p{
+    margin-top: 12px;
+    color: var(--Grayish-Blue);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    /* letter-spacing: 0.6px; */
+}
+figure{
+    align-self: flex-end;
+}
+/* ------------------------------------- */
+/*              Header Style             */
+/* ------------------------------------- */
+header{
+    text-align: center;
+    font-weight: 200;
+    width: 33%;
+}
+header :nth-child(1){
+    font-size: 30px;
+    color: var(--Very-Dark-Blue);
+}
+header h1{
+    color: var(--Very-Dark-Blue);
+}
+/* ------------------------------------- */
+/*              main Style               */
+/* ------------------------------------- */
+main{
+    width: 70%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-gap: 30px;
+    position: relative;
+}
+
+.part1,.team,.karma,.part3{
+    padding: 20px;
+    background-color: var(--Very-Light-Gray);
+    box-shadow: 0px 2px 6px var(--Grayish-Blue);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+}
+.part1{
+    width: 33.3%;
+    border-top: 4px solid var(--Cyan);
+    height: 70%;
+}
+.part2{
+    width: 33.3%;
+}
+.part2 .team{
+    margin-bottom: 30px;
+    border-top: 4px solid var(--Red);
+}
+.part2 .karma{
+    border-top: 4px solid var(--Orange);
+}
+.part3{
+    border-top: 4px solid var(--Blue);
+    height: 70%;
+    width: 33.3%;
+}
+/* ------------------------------------- */
+/*            Footer Style               */
+/* ------------------------------------- */
+footer{
+    position: absolute;
+    bottom: 10px;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    font-weight: 600;
+    text-decoration: none;
+}
+/* ------------------------------------- */
+/*              Media Query              */
+/* ------------------------------------- */
+@media only screen and (max-width: 376px) {
+    body{
+        width: 375px;
+    }
+    p{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 21px;
+    }
+    figure img{
+        width: 50px;
+    }
+    header{
+        padding: 30px 50px;
+        width: 100%;
+    }
+    header :nth-child(1){
+        font-size: 20px;
+    }
+    main{
+        padding: 0 60px 40px 60px;
+        width: 100%;
+        margin-top: 0px;
+        flex-direction: column;
+        grid-gap: 20px;
+    }
+    .part1,.team,.karma,.part3{
+        grid-gap: 20px;
+        
+    }
+    .part1{
+        width: 100%;
+        margin-top: 8%;
+    }
+    .part2{
+        width: 100%;
+    }
+    .part2 .team{
+        margin-bottom: 20px;
+    }
+    .part3{
+        margin-top: 0;
+        width: 100%;
+    }
+}
